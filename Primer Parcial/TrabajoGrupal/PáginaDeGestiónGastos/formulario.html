@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Gastos Personales</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #A5A4A6;
+        }
+
+        
+
+        footer {
+            margin-top: auto;
+            background-color: #0F0C26;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #131240;
+        }
+
+        nav {
+            background-color: #3B3C40;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid #131240;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        article,
+        aside {
+            flex: 1;
+            padding: 20px;
+            border-radius: 10px;
+            /* Bordes redondeados */
+            margin: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+        }
+
+        article {
+            background-color: #eee;
+        }
+
+        aside {
+            background-color: #ddd;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        .portada {
+            width: 100%;
+        }
+
+        .fondo{
+
+            max-height: 5vw;
+            min-height: 35%;
+            position: relative;
+            top: 0;
+            left: 0px;
+            overflow: hidden;
+            z-index: 1;                     
+        }
+
+      
+
+        .tema{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            top: -5%;
+            left: 1%;
+            z-index: 4;
+        }
+
+        .tema h1{
+            color: #0F0C26;
+            font-size: 2.8vw;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 1px 2px 2px black;
+        }
+       
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #A5A4A6; 
+        }
+
+        header{
+            background-color: #0F0C26; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #131240; 
+        }
+        footer {
+            margin-top: auto;
+            background-color: #0F0C26; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 2px solid #131240; 
+        }
+
+        form {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 400px;
+            margin: auto;
+            text-align: center;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            background-color: #FCFCFC;
+            border: 1px solid #E1E1E1;
+        }
+
+        button {
+            background-color: #4A90E2;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+        }
+
+     
+
+        .botonFormulario {
+            background-color: white;
+            border-color: #3E3E3E;
+            border-radius: 3px;
+            border-style: solid;
+            border-width: 1px;
+            color: #3E3E3E;
+            cursor: pointer;
+            height: 36px;
+            width: 65px;
+            margin-left: 5px;
+        }
+
+        .botonFormulario:hover {
+            opacity: 0.8;
+        }
+
+        .botonFormulario:active {
+            background-color: rgb(0, 149, 255);
+        }
+
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Formulario de Gastos Personales</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="formulario_registro_gastos.html">Registro de Gastos</a>
+        <a href="#">Reportes Mensuales</a>
+        <a href="formulario.html">Formulario</a> 
+        <a href="">Registrarse</a>
+        <a href="formularioLogin.php">Iniciar Sesión</a>
+    </nav>
+
+    <form  action="recuperacion.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion" cols="50" required></textarea>
+
+        <label for="presupuesto">Presupuesto Mensual:</label>
+        <input type="number" id="presupuesto" name="presupuesto" min="0" step="0.01" required>
+
+        <label for="fecha">Mes y Año:</label>
+        <input type="month" id="fecha" name="mesYAnio" required>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="sexo">Sexo:</label> <br>
+        <select id="sexo" name="sexo"   required>
+            <option value="hombre">Hombre</option>
+            <option value="mujer">Mujer</option>
+        </select>
+        <br><br>
+        <label for="adjuntarArchivo">Adjuntar Archivo:</label>
+        <input type="file" id="adjuntarArchivo" name="adjuntarArchivo">
+
+        <label for="infoAdicional">Información Adicional:</label>
+        <input type="checkbox" id="infoAdicional" name="infoAdicional">
+
+        <button class="botonFormulario" type="submit">Enviar</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2023 Juan Pablo Pinza & Alex Trejo</p>
+    </footer>
+</body>
+
+</html>
